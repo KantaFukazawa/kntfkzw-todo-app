@@ -1,14 +1,17 @@
 .contianer
   %h2.page-ttl.boards-page-ttl All Boards
-  .card-items
-    .card-item
-      %h3.card-item-ttl Brackets
-      %a.menu-btn 
-        .mini-menu
-      %p.card-item-txt Saving money – is something we would all like.
-      .card-item-img
-        = image_tag 'default-avatar.png', class: 'card-img'
-    %a.item-add{:href => "#"} + Add new board
+  - @boards.each do |board|
+    .card-items
+      .card-item
+        %h3.card-item-ttl
+          = board.title 
+        %a.menu-btn 
+          .mini-menu
+        %p.card-item-txt 
+          = board.content
+        .card-item-img
+          = image_tag 'default-avatar.png', class: 'card-img'
+  %a.item-add{:href => "#"} + Add new board
  
       
 

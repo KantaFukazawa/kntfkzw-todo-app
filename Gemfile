@@ -43,6 +43,7 @@ group :development do
   gem 'devise'
   gem 'haml-rails'
   gem 'erb2haml'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
 group :test do
