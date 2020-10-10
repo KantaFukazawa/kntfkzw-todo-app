@@ -1,3 +1,16 @@
+@import '_variables';
+
+.container {
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $font-main;
+}
+
 .page-ttl {
   font-family: Avenir;
   font-style: normal;
@@ -6,4 +19,40 @@
   line-height: 36px;
   /* identical to box height */
   color: $font-main;
+}
+
+.form-name {
+  width: 56px;
+  height: 25px;
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  color: $font-main;
+}
+
+.text {
+  display: block;
+  margin: 4px auto 33px;
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  border: #F4F4F4;
+  background: #F4F4F4;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  position: fixed;
+  display: inline-block;
+  bottom: 39px;
+  width: 90%;
+  max-width: 100%;
+  background: #F8BD1C;
+  color: #FFFFFF;
+  border: #F8BD1C;
+  padding: 8px 0;
+  border-radius: 4px;
 }

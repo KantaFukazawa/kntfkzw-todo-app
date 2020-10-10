@@ -1,6 +1,5 @@
 .container
-  %h3.form-name.boards Boards
-  %h2.page-ttl.form-page-ttl Sign in
+  %h2.page-ttl Sign in
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
       = f.label :Email, class: 'form-name'
