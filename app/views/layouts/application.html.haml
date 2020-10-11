@@ -13,4 +13,8 @@
       %h3.header-ttl Boards
       %div.img
         = image_tag 'default-avatar.png', class: 'prf-img' 
+    - if flash.present?
+      .notifications
+        - flash.each do |key, value|
+          = content_tag(:div, value, class: key)
     = yield
