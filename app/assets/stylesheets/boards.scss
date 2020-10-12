@@ -18,6 +18,11 @@
     line-height: 25px;
     /* identical to box height */
     color: $font-main;
+
+    &-showver {
+      font-size: 28px;
+      line-height: 25px;
+    }
   }
 
   &-txt {
@@ -28,6 +33,11 @@
     font-size: 14px;
     line-height: 19px;
     color: $font-main;
+
+    &-showver {
+      font-size: 24px;
+      line-height: 19px;
+    }
   }
 
   &-img {

@@ -3,6 +3,10 @@ class BoardsController < ApplicationController
     @boards = Board.all
   end
 
+  def show
+    @board = Board.find(params[:id])
+  end
+
   def new
     @board = Board.new
   end
@@ -16,6 +20,13 @@ class BoardsController < ApplicationController
       render :new
     end
   end
+
+  # def edit
+  #   @board = Board.find(params[:id])
+  # end
+
+  # def update
+  # end
 
   private
   def board_params
