@@ -33,7 +33,62 @@
 
 
 .prf-img {
-  margin: 14px 0 0 0;
   width: 30px;
   height: 30px;
+}
+
+.login_btn {
+  background: $item-bgc;
+  border-radius: 10px;
+}
+
+.prf-dropdown {
+  position: relative;
+  top: 14px;
+  right: 0;
+  display: inline-block;
+}
+
+.prf-dropdown-content {
+  font-weight: normal;
+  display: none;
+  top: 30px;
+  right: 10px;
+  position: absolute;
+  background-color: $item-bgc;
+  width: 140px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  &.mini {
+    min-width: 100px;
+  }
+}
+
+.prf-dropdown-content a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: $font-main;
+}
+
+.prf-dropdown-content a:hover {
+  background-color: $item-bgc;
+}
+
+.prf-dropdown:hover .prf-dropdown-content {
+  display: block;
+}
+
+.login_btn {
+  text-align: center;
+  padding: 16px 12px;
+  height: 25px;
+  width: 70px;
+  font-size: 12px;
+  background: #F8BD1C;
+  color: #FFFFFF;
+  border: #F8BD1C;
+  border-radius: 4px;
 }

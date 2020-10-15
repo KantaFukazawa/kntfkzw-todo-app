@@ -11,10 +11,12 @@
   %body
     %header.header
       %h3.header-ttl Boards
-      %div.img
-        = image_tag 'default-avatar.png', class: 'prf-img' 
-    - if flash.present?
-      .notifications
-        - flash.each do |key, value|
-          = content_tag(:div, value, class: key)
+      -if user_signed_in?
+        .prf-dropdown
+          = image_tag 'default-avatar', class: 'prf-img'
+          .prf-dropdown-content.mini
+            = link_to 'プロフィール'
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete
+      - else
+        = link_to 'ログイン' ,new_user_session_path, class: 'login_btn'
     = yield
