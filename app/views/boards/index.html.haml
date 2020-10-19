@@ -4,7 +4,7 @@
     .card-item
       %h3.card-item-ttl
         = board.title 
-      - if user_signed_in? && current_user.has_written?(@board)
+      - if user_signed_in? && current_user.has_written?(board)
         .dropdown
           = image_tag 'actions.svg', class: 'dropbtn'
           .dropdown-content.mini

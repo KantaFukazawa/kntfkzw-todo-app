@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :boards, dependent: :destroy
 
   def has_written?(board)
-    boards.exists?(@board)
+    boards.exists?(id: board.id)
   end
 end

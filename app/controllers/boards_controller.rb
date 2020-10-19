@@ -6,7 +6,7 @@ class BoardsController < ApplicationController
   end
 
   def new
-    @board = current_user.boards.build
+    @board = Board.new
   end
 
   def create
@@ -41,6 +41,10 @@ class BoardsController < ApplicationController
 
   private
   def board_params
-    params.require(:board).permit(:title, :content)
+    params.require(:board).permit(:title, :content, :user_id)
+  end
+
+  def set_article
+    @board = board.find(params[:id])
   end
 end
