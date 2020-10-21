@@ -3,12 +3,13 @@
   - @boards.each do |board|
     .card-item
       %h3.card-item-ttl
-        = board.title  
-      .dropdown
-        = image_tag 'actions.svg', class: 'dropbtn'
-        .dropdown-content.mini
-          = link_to '編集する', edit_board_path(board.id)
-          = link_to '削除する', board_path(board.id), method: :delete
+        = board.title 
+      - if user_signed_in? && current_user.has_written?(board)
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to '編集する', edit_board_path(board.id)
+            = link_to '削除する', board_path(board.id), method: :delete
       %p.card-item-txt 
         = board.content
       .card-item-img
