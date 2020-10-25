@@ -5,6 +5,10 @@
       %li
         = message
   =form_with(model: @task, url: tasks_path, method: 'post', local: true) do |f|
+    %div
+      = f.label :eyecatch, 'アイキャッチ'
+    %div
+      = f.file_field :eyecatch
     %div 
       =f.label :title, 'Name', class: 'form-name'
     %div

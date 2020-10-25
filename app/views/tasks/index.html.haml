@@ -1,13 +1,14 @@
-.contianer
+.container
   %h2.page-ttl.boards-page-ttl Brackets
   - @tasks.each do |task|
-    .card-item
-      %h3.card-item-ttl
-        = task.title 
-      %p.card-item-txt 
-        = task.description
-      .card-item-img
-        = image_tag 'default-avatar.png', class: 'card-img'
-      %i.far.fa-comment-dots
+    = link_to task_path(task.id) do
+      .card-item
+        %img.eyecatch{:src => "airbnbexample.jpg"}/
+        %h3.card-item-ttl
+          = task.title 
+        %p.card-item-txt 
+          = task.description
+        .card-item-img
+          = image_tag 'default-avatar.png', class: 'card-img'
   = link_to new_task_path do
     .item-add + Add new task

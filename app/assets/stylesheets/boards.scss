@@ -6,8 +6,10 @@
 .card-item {
   position: relative;
   width: 100%;
+  max-width: 100%;
   background: $item-bgc;
   border-radius: 10px;
+  margin: 26px auto 0 auto;
 
   &-ttl {
     padding: 32px 0 0 17px;
@@ -113,4 +115,10 @@
 
 .new-board-txt {
   height: 203px;
+}
+
+.eyecatch {
+  padding: 32px 0 0 17px;
+  width: 292px;
+  height: 170px;
 }
