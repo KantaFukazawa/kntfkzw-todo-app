@@ -1,0 +1,24 @@
+.task-page-upper {
+  position: relative;
+
+ 
+  &-ddb {
+    position: absolute;
+    top: 3px;
+  }
+
+}
+
+.task-page-eyecatch {
+  width: 310px;
+  height: 170px;
+}
+
+.task-page-txt {
+  padding: 25px 15px;
+  width: 280px;
+  left: 26px;
+  top: 364px;
+  background: #F4F4F4;
+  border-radius: 10px;
+}

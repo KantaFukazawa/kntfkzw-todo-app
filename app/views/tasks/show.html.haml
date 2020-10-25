@@ -1,0 +1,15 @@
+.container 
+  .task-page-contents
+    .task-page-upper
+      %h3.page-tll.task-page-upper-ttl
+        = @task.title
+      - if user_signed_in? && current_user.has_written?(@task)
+        .dropdown.task-page-upper-ddb
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to '編集する', edit_task_path(@task)
+            = link_to '削除する', task_path(@task), method: :delete
+    %img.task-page-eyecatch{:src => "airbnbexample.jpg"}/
+    %p.task-page-txt
+      = @task.description
+    .task-page-comment
