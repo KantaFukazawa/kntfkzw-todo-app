@@ -13,3 +13,10 @@
     %p.task-page-txt
       = @task.description
     .task-page-comment
+      %h4.comment-ttl
+        Comment
+      - @comments.each do |comment|
+        .comment-content
+          %p= comment.content
+    = link_to new_task_comment_path(@task) do
+      .addcomment-btn + Add new comment
