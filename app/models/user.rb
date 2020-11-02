@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :tasks, dependent: :destroy
   has_one :profile, dependent: :destroy
 
+  delegate :birthday, :gender, to: :profile, allow_nil: true
+
   def has_written?(board)
     boards.exists?(id: board.id)
   end
