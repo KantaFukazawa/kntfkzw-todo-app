@@ -1,0 +1,49 @@
+@import 'variables';
+
+.profiles-user-img {
+  padding: 20px 0 0 0;
+}
+
+.profilepage-info {
+  padding: 20px 0 0 0;
+  
+}
+
+.profilepage-user-name {
+  position: relative;
+
+}
+
+.profilepage-user-display {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.profilepage-user-toedit {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  display: inline-block;
+  padding: 5px;
+  background: #F8BD1C;
+  border-radius: 4px;
+
+  a {
+    color: #fff;
+  }
+}
+
+.profilepage-user-introduction {
+  background: #F4F4F4;
+  border-radius: 10px;
+  padding: 20px 15px;
+  margin: 20px 0 0 0;
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}

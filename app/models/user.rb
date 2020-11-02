@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :boards, dependent: :destroy
   has_many :tasks, dependent: :destroy
+  has_one :profile, dependent: :destroy
 
   def has_written?(board)
     boards.exists?(id: board.id)
@@ -12,5 +13,9 @@ class User < ApplicationRecord
 
   def has_written?(task)
     tasks.exists?(id: task.id)
+  end
+
+  def display_name
+    profile&.mickname || self.email.split('@').first
   end
 end

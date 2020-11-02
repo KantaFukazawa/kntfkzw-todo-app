@@ -15,7 +15,7 @@
         .prf-dropdown
           = image_tag 'default-avatar', class: 'prf-img'
           .prf-dropdown-content.mini
-            = link_to 'プロフィール'
+            = link_to 'プロフィール', profile_path
             = link_to 'ログアウト', destroy_user_session_path, method: :delete
       - else
         = link_to 'ログイン' ,new_user_session_path, class: 'login_btn'
