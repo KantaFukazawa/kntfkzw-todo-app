@@ -16,6 +16,10 @@ class User < ApplicationRecord
   end
 
   def display_name
-    profile&.mickname || self.email.split('@').first
+    profile&.nickname || self.email.split('@').first
+  end
+
+  def prepare_profile
+    profile || build_profile
   end
 end
