@@ -1,11 +1,11 @@
 .container 
   .profilepage-items
     .profiles-user-img
-      = image_tag 'default-avatar.png'
+      = image_tag current_user.avatar_image
     .profilepage-info
       .profilepage-user-name
         .profilepage-user-display
-          #{current_user.display_name} (#{current_user.birthday}・#{current_user.gender})
+          #{current_user.display_name} (#{current_user.age}・#{I18n.t("enum.genders.#{current_user.gender}")})
         .profilepage-user-toedit
           = link_to 'Edit', edit_profile_path
       .profilepage-user-introduction
@@ -18,4 +18,4 @@
         %p.card-item-txt 
           = task.description
         .card-item-img
-          = image_tag 'default-avatar.png', class: 'card-img'
+          = image_tag current_user.avatar_image, class: 'card-img'

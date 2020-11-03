@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :tasks, dependent: :destroy
   has_one :profile, dependent: :destroy
 
-  delegate :birthday, :gender, to: :profile, allow_nil: true
+  delegate :birthday, :age, :gender, to: :profile, allow_nil: true
 
   def has_written?(board)
     boards.exists?(id: board.id)
@@ -23,5 +23,13 @@ class User < ApplicationRecord
 
   def prepare_profile
     profile || build_profile
+  end
+
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'default-avatar.png'
+    end
   end
 end
