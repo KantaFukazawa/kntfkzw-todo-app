@@ -9,6 +9,6 @@
         %p.card-item-txt 
           = task.description
         .card-item-img
-          = image_tag 'default-avatar.png', class: 'card-img'
+          = image_tag task.user.avatar_image, class: 'card-img'
   = link_to new_task_path do
     .item-add + Add new task

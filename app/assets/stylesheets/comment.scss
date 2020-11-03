@@ -1,3 +1,5 @@
+@import 'variables';
+
 .comment-ttl {
   font-family: Avenir;
   font-style: normal;
@@ -8,6 +10,31 @@
   color: $font-main;
 }
 
+.comment-item {
+  position: relative;
+  height: 60px;
+}
+
+.comment-img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  background-position: center center;
+}
+
+.comment-content {
+  position: absolute;
+  left: 56px;
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: $font-main;
+
+}
+
 .addcomment-btn {
   text-align: center;
   padding: 28px 0px;
@@ -16,4 +43,5 @@
   background: #FFFFFF;
   border: 1px dashed rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  clear: both;
 }

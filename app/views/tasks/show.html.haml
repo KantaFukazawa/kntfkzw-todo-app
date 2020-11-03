@@ -16,7 +16,8 @@
       %h4.comment-ttl
         Comment
       - @comments.each do |comment|
-        .comment-content
-          %p= comment.content
+        .comment-item
+          = image_tag @task.user.avatar_image, class: 'comment-img'
+          %p.comment-content= comment.content
     = link_to new_task_comment_path(@task) do
-      .addcomment-btn + Add new comment
+      .addcomment-btn + Add new comment 
