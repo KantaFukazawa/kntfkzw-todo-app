@@ -13,7 +13,7 @@
       %h3.header-ttl Boards
       -if user_signed_in?
         .prf-dropdown
-          = image_tag 'default-avatar', class: 'prf-img'
+          = image_tag current_user.avatar_image, class: 'prf-img'
           .prf-dropdown-content.mini
             = link_to 'プロフィール', profile_path
             = link_to 'ログアウト', destroy_user_session_path, method: :delete

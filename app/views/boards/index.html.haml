@@ -13,6 +13,6 @@
       %p.card-item-txt 
         = board.content
       .card-item-img
-        = image_tag 'default-avatar.png', class: 'card-img'
+        = image_tag board.user.avatar_image, class: 'card-img'
   = link_to new_board_path do
     .item-add + Add new board
