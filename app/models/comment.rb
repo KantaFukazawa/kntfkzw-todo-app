@@ -1,7 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :task
   belongs_to :user
-  belongs_to :article
   has_many :comment_images
   accepts_nested_attributes_for :comment_images
 
