@@ -9,7 +9,8 @@
           .dropdown-content.mini
             = link_to '編集する', edit_task_path(@task)
             = link_to '削除する', task_path(@task), method: :delete
-    %img.task-page-eyecatch{:src => "airbnbexample.jpg"}/
+    - if @task.eyecatch.attached?
+      = image_tag @task.eyecatch
     %p.task-page-txt
       = @task.description
     .task-page-comment
@@ -17,7 +18,7 @@
         Comment
       - @comments.each do |comment|
         .comment-item
-          = image_tag @task.user.avatar_image, class: 'comment-img'
+          = image_tag comment.user.avatar_image, class: 'comment-img'
           %p.comment-content= comment.content
     = link_to new_task_comment_path(@task) do
       .addcomment-btn + Add new comment 
