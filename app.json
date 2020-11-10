@@ -1,0 +1,16 @@
+{
+  "name": "kntfkzw-todo-app",
+  "description": "This is kntfkzw-todo-app",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/KantaFukazawa/kntfkzw-todo-app",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
