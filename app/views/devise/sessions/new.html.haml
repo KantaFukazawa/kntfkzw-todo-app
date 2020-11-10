@@ -11,4 +11,6 @@
       = f.password_field :password, autocomplete: "current-password", class: 'text'
     .actions
       = f.submit "Submit", class: 'btn-primary'
+    = link_to 'Sign up', new_user_registration_path, class: 'signup-link'
   = render "devise/shared/links"
+    
