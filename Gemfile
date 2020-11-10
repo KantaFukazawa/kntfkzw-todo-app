@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'aws-sdk-s3', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -34,6 +35,7 @@ group :development, :test do
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer' # スタックをたどれる
+  gem 'dotenv-rails'
 end
 
 group :development do
