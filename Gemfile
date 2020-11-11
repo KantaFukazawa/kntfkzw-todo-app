@@ -36,7 +36,6 @@ group :development, :test do
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer' # スタックをたどれる
   gem 'dotenv-rails'
-  gem 'jquery-rails'
 end
 
 group :development do
@@ -48,6 +47,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'haml-rails'
   gem 'erb2haml'
+  gem 'devise'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
