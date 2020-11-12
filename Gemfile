@@ -47,7 +47,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'haml-rails'
   gem 'erb2haml'
-  gem 'devise'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
@@ -57,6 +56,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+group :development, :production, :test do
+  gem 'devise'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
