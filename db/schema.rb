@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(version: 2020_11_12_145023) do
     t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
+    t.bigint "User_id"
+    t.index ["User_id"], name: "index_comments_on_User_id"
     t.index ["task_id"], name: "index_comments_on_task_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
